@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: bisque;
+                font-family: Arial, Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                color:burlywood;
+                text-align: center;
+            }
+            li {
+                fron-family: "Courier New", Courier, monospace;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Bienvenidos a la lista de tareas</h1>
+        <h2>Aca van a ir las tareas</h2>
+       <p>
+        Yo escribi lo que queria.
+       </p> 
+       Hola me llamo {{ nombre }} y tengo {{ edad }} y mis hobbies son
+       {% for x in hobbies %}
+       <li> {{ x }} </li>
+       {% endfor %}
+
+       <p> y bue, mis tareas son:</p>
+       
+       {% for tarea in lista_tareas %}
+            <li> {{ tarea.titulo }}: {{ tarea.descripcion }} </li>
+       {% endfor %}
+
+    </body>
+
+</html>
